@@ -1,0 +1,29 @@
+#patrat-rosu {
+    background-color: rgb(158, 0, 0);
+    height: 150px;
+    width: 150px;
+}
+
+#patrat-albastru {
+    background-color: rgb(0, 4, 253);
+    height: 150px;
+    width: 150px;
+}
+
+#cerc-rosu {
+    background-color: rgb(158, 0, 0);
+    height: 145px;
+    width: 145px;
+    border-radius: 100px;
+    border-color: black;
+    border-style: solid;
+}
+
+#cerc-albastru {
+    background-color: rgb(0, 4, 253);
+    height: 145px;
+    width: 145px;
+    border-radius: 100px;
+    border-color: black;
+    border-style: solid;
+}
