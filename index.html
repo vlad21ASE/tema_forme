@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forme</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<br>
+    <div id="patrat-rosu">        
+    </div>
+<br>
+    <div id="patrat-albastru">
+    </div>
+<br>
+    <div draggable="true" id="cerc-rosu">
+    </div>
+<br>
+    <div draggable="true" id="cerc-albastru">
+    </div>
+
+    <script>
+        const cercRosu = document.getElementById('cerc-rosu');
+        const cercAlbastru = document.getElementById('cerc-albastru');
+        const destinatieRosu = document.getElementById('patrat-rosu');
+        const destinatieAlbastru = document.getElementById('patrat-albastru');
+    
+        cercAlbastru.addEventListener('dragstart', function(event) {
+            event.dataTransfer.setData('text/plain', 'albastru');
+        });
+    
+        destinatieAlbastru.addEventListener('dragover', function(event) {
+            event.preventDefault();
+        });
+    
+        destinatieAlbastru.addEventListener('drop', function(event) {
+            if (event.dataTransfer.getData('text/plain') === 'albastru') {
+                destinatieAlbastru.append(cercAlbastru);
+            }
+        });
+    
+        cercRosu.addEventListener('dragstart', function(event) {
+            event.dataTransfer.setData('text/plain', 'rosu');
+        });
+    
+        destinatieRosu.addEventListener('dragover', function(event) {
+            event.preventDefault();
+        });
+    
+        destinatieRosu.addEventListener('drop', function(event) {
+            if (event.dataTransfer.getData('text/plain') === 'rosu') {
+                destinatieRosu.append(cercRosu);
+            }
+        });
+    </script>
+    
+</body>
+</html>
